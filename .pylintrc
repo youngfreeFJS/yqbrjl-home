@@ -1,0 +1,48 @@
+[MASTER]
+
+extension-pkg-whitelist=flask_sqlalchemy, sqlalchemy
+
+# 忽略的文件类型
+ignore = CVS
+
+# 当pylint检测到文件中的错误时，终止检测
+fail-under = 10
+
+# 在pylint报告中显示每个警告的消息、类别和警告符号
+reports = no
+
+[MESSAGES CONTROL]
+
+# 所有警告和错误的规则
+disable=W0718, W0231, C0114 ,C0115, C0116, E0015, E1101
+
+# 当pylint检测到的错误数量超过指定的限制时，终止检测
+max-args = 10
+max-branches = 15
+max-locals = 15
+max-statements = 50
+
+[FORMAT]
+
+# 显示每个警告的消息和类别
+include-ids = yes
+
+# 每行最多字符数
+max-line-length = 300
+
+[BASIC]
+
+# 设置缩进的大小
+indent-string = "    "
+
+# 启用/禁用某些检查项
+good-names = i,j,k,ex,Run,_
+bad-names = foo,bar,baz
+
+[TYPECHECK]
+
+# 检查不可变的类是否正确使用了元组
+check-untyped-defs = yes
+
+# 对于每个函数和方法，检查返回值的类型是否与函数声明中的类型匹配
+check-return-type = yes

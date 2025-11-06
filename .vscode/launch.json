@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Pyufo Modlue Testing",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pyufo",
+            "justMyCode": false,
+        },
+        {
+            "name": "Pipeline e2e",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/pyufo/test_e2e/action_e2e/test_pipline_scripts.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }  
+    ]
+}
