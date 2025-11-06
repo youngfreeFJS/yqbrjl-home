@@ -6,7 +6,6 @@
 import logging
 from typing import Optional
 from sqlalchemy.exc import OperationalError
-from wxcloudrun import db
 from wxcloudrun.model.counter_model import CountersModel
 
 logger = logging.getLogger('log')
@@ -45,6 +44,9 @@ class CounterDao:
         Returns:
             bool: 更新成功返回 True，否则返回 False。
         """
+
+        from wxcloudrun import db
+
         counter = CountersModel.query.get(counter_id)
 
         valid_types = {'add', 'sub', 'mul', 'div'}
