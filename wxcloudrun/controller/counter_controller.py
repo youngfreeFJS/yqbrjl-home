@@ -1,4 +1,4 @@
-"""控制器层 - Counter 控制器。"""
+"""Counter controller - Counter 控制器。"""
 
 from flask import Blueprint, jsonify
 from wxcloudrun.service.counter_service import CounterService
